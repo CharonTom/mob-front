@@ -1,15 +1,16 @@
 import React from "react";
 import { BsLightningCharge, BsFuelPump } from "react-icons/bs";
+import { AiOutlineFire } from "react-icons/ai";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
-import mobelec from "../assets/mob-elec.jpg";
+import mobelec from "../assets/mob_elec.webp";
+import mobtherm from "../assets/mob-elec.jpg";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-// Importez votre image thermique si vous en avez une
-// import mobtherm from "../assets/mob-therm.jpg";
 
 const MobDesc = () => {
   const mobsData = [
@@ -25,7 +26,6 @@ const MobDesc = () => {
         "▸ Design rétro authentique",
         "▸ Autonomie 50 km",
       ],
-      bgColor: "bg-amber-100",
       buttonColor: "bg-orange-500",
     },
     {
@@ -33,14 +33,13 @@ const MobDesc = () => {
       type: "Thermique",
       price: "65€",
       duration: "journée",
-      icon: <BsFuelPump className="text-white text-3xl" />,
-      image: mobelec, // Remplacez par votre image thermique
+      icon: <AiOutlineFire className="text-white text-3xl" />,
+      image: mobtherm,
       features: [
         "▸ Expérience vintage authentique",
         "▸ Son caractéristique",
         "▸ Disponible toute la journée",
       ],
-      bgColor: "bg-amber-100",
       buttonColor: "bg-orange-500",
     },
   ];
@@ -53,8 +52,8 @@ const MobDesc = () => {
         <Swiper
           modules={[Navigation]}
           navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next-mob",
+            prevEl: ".swiper-button-prev-mob",
           }}
           loop
           spaceBetween={30}
@@ -63,9 +62,9 @@ const MobDesc = () => {
         >
           {mobsData.map((mob) => (
             <SwiperSlide key={mob.id}>
-              <div className="w-full h-[500px] flex justify-center items-center gap-6">
+              <div className="w-full h-[500px] flex justify-center items-center gap-1">
                 {/* Image Container */}
-                <div className="bg-amber-600 w-[400px] h-full rounded-xl flex items-center justify-center text-white text-2xl relative">
+                <div className=" w-[400px] h-full rounded-xl flex items-center justify-center text-white text-2xl relative">
                   <img
                     src={mob.image}
                     alt={`Mobylette ${mob.type}`}
@@ -74,9 +73,7 @@ const MobDesc = () => {
                 </div>
 
                 {/* Description Container */}
-                <div
-                  className={`${mob.bgColor} w-[300px] h-full rounded-xl p-6 flex flex-col items-center`}
-                >
+                <div className=" w-[300px] h-full rounded-xl p-6 flex flex-col items-center bg-orange-50 border border-orange-800">
                   <div className="bg-orange-500 rounded-full w-16 h-16 flex items-center justify-center mb-4">
                     {mob.icon}
                   </div>
@@ -104,9 +101,9 @@ const MobDesc = () => {
             </SwiperSlide>
           ))}
 
-          {/* Navigation Buttons - Vrais chevrons */}
-          <FaAngleLeft className="swiper-button-prev -translate-y-1/2 z-20 text-[40px] text-orange-500 absolute top-1/2 -left-5 cursor-pointer" />
-          <FaAngleRight className="swiper-button-next -translate-y-1/2 z-20 text-[40px] text-orange-500 absolute top-[50%] -right-5 cursor-pointer" />
+          {/* Navigation Buttons - Classes personnalisées */}
+          <FaAngleLeft className="swiper-button-prev-mob -translate-y-1/2 z-20 text-[40px] text-orange-500 absolute top-1/2 left-5 cursor-pointer hover:text-orange-600 transition-colors" />
+          <FaAngleRight className="swiper-button-next-mob -translate-y-1/2 z-20 text-[40px] text-orange-500 absolute top-[50%] right-5 cursor-pointer hover:text-orange-600 transition-colors" />
         </Swiper>
       </div>
     </section>
