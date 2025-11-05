@@ -1,5 +1,4 @@
-import React from "react";
-import { BsLightningCharge, BsFuelPump } from "react-icons/bs";
+import { BsLightningCharge } from "react-icons/bs";
 import { AiOutlineFire } from "react-icons/ai";
 
 import { Swiper, SwiperSlide } from "swiper/react";
