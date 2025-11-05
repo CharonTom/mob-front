@@ -1,4 +1,4 @@
-import banner from "../assets/banner.jpg";
+import banner from "../assets/images/banner.jpg";
 import ReservationButton from "../components/ReservationButton";
 
 const Banner = () => {

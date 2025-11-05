@@ -1,3 +1,4 @@
+import Around from "../components/Around";
 import Banner from "../components/Banner";
 import MobDesc from "../components/MobDesc";
 
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <Banner />
       <MobDesc />
+      <Around />
     </div>
   );
 };

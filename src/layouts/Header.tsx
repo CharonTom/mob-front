@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       }`}
     >
       {/* Ligne orange */}
-      <div className="bg-orange-400 h-[7px] w-full" />
+      <div className="bg-orange-500 h-[7px] w-full" />
 
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -44,8 +44,8 @@ const Header: React.FC = () => {
                         ? "text-orange-500"
                         : "text-gray-700 hover:text-orange-500"
                       : isActive
-                      ? "text-orange-300"
-                      : "text-white hover:text-orange-300"
+                      ? "text-orange-500"
+                      : "text-white hover:text-orange-500"
                   }`
                 }
               >
