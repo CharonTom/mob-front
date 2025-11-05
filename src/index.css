@@ -1,1 +1,79 @@
 @import "tailwindcss";
+
+/* Utility permet de fusionner plusieurs propriété sous une seule */
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+@utility flex-between {
+  @apply flex items-center justify-between;
+}
+
+/* --------------------------------- Booking button ----------------------------------- */
+
+.book-button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  height: 4rem;
+  width: 4rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .book-button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    height: 2rem;
+    width: 2rem;
+  }
+  .book-button.learn-more .circle .icon.arrow {
+    left: 0.125rem !important;
+  }
+}
+
+.book-button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: white;
+}
+
+.book-button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 1.125rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.book-button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid white;
+  border-right: 0.125rem solid white;
+  transform: rotate(45deg);
+}
+
+.book-button.learn-more .book-button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+.book-button:hover .circle {
+  width: 100%;
+}
+
+.book-button:hover .circle .icon.arrow {
+  background: white;
+  transform: translate(1rem, 0);
+}
+
+.book-button:hover .book-button-text {
+  color: white;
+}

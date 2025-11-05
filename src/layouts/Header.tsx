@@ -41,11 +41,11 @@ const Header: React.FC = () => {
                   `font-medium transition-colors duration-300 ${
                     isScrolled
                       ? isActive
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-500"
+                        ? "text-orange-500"
+                        : "text-gray-700 hover:text-orange-500"
                       : isActive
-                      ? "text-blue-300"
-                      : "text-white hover:text-blue-300"
+                      ? "text-orange-300"
+                      : "text-white hover:text-orange-300"
                   }`
                 }
               >
