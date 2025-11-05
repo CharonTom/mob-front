@@ -1,10 +1,6 @@
 import { FaLocationDot } from "react-icons/fa6";
 
 function Map() {
-  // Coordonnées de votre adresse spécifique
-  const address = "12 Rue de la République, 84800 L'Isle-sur-la-Sorgue";
-  const encodedAddress = encodeURIComponent(address);
-
   return (
     <div className="w-full h-full">
       <iframe
