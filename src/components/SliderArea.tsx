@@ -10,12 +10,12 @@ function SliderArea() {
     <div className="slider-area w-full">
       <Swiper
         autoplay
-        spaceBetween={15}
+        spaceBetween={10}
         loop
         slidesPerView={"auto"}
         modules={[Pagination, Navigation, Autoplay]}
         grabCursor={true}
-        className="h-[35vh] md:h-[45vh] lg:h-[55vh] w-full"
+        className="h-[35vh] md:h-[45vh] lg:h-[55vh] w-[80%]"
       >
         {areaSliderData.map((slide, index) => (
           <SwiperSlide key={index}>
