@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { NAV_ITEMS } from "../lib/constants";
+import { NAV_ITEMS } from "../../lib/constants";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

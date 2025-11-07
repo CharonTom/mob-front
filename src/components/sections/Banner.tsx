@@ -1,5 +1,5 @@
-import banner from "../assets/images/banner.jpg";
-import ReservationButton from "../components/ReservationButton";
+import banner from "../../assets/images/banner.jpg";
+import ReservationButton from "../ReservationButton";
 
 const Banner = () => {
   return (
